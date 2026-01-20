@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安特耐 - 医用改性高分子材料领先供应商</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+        }
+        
+        /* 基础样式 */
+        body {
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部导航 */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2A5CAF;
+        }
+        
+        .logo-text span {
+            font-size: 16px;
+            color: #666;
+            margin-left: 5px;
+        }
+        
+        .nav ul {
+            display: flex;
+        }
+        
+        .nav li {
+            margin: 0 15px;
+        }
+        
+        .nav a {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav a:hover {
+            color: #2A5CAF;
+            background: #f5f8ff;
+        }
+        
+        /* 横幅轮播区 */
+        .banner {
+            height: 500px;
+            background: url("?prompt=medical%20polymer%20materials%20factory%20exterior%20modern%20building&image_size=landscape_16_9") no-repeat center center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .banner-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .banner-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2A5CAF;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .banner-btn:hover {
+            background: #1E4A8F;
+        }
+        
+        /* 核心优势板块 */
+        .advantage {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .advantage-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .advantage-item {
+            width: 23%;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .advantage-icon {
+            font-size: 40px;
+            color: #2A5CAF;
+            margin-bottom: 20px;
+        }
+        
+        .advantage-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .advantage-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* 产品中心板块 */
+        .product {
+            padding: 80px 0;
+        }
+        
+        .product-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .product-item {
+            width: 31%;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+            background: #fff;
+        }
+        
+        .product-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-more {
+            display: inline-block;
+            color: #2A5CAF;
+            font-weight: 500;
+        }
+        
+        .product-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* 数据展示板块 */
+        .data {
+            padding: 60px 0;
+            background: #2A5CAF;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .data-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .data-item {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+        
+        .data-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .data-text {
+            font-size: 16px;
+        }
+        
+        /* 底部信息 */
+        footer {
+            background: #333;
+            color: #ccc;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col {
+            width: 22%;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a {
+            color: #ccc;
+        }
+        
+        .footer-col a:hover {
+            color: #2A5CAF;
+        }
+        
+        .footer-col p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 1200px) {
+            .container {
+                width: 95%;
+            }
+            .advantage-item {
+                width: 48%;
+            }
+            .product-item {
+                width: 48%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            .nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav li {
+                margin: 5px 10px;
+            }
+            .banner {
+                height: 350px;
+            }
+            .banner h1 {
+                font-size: 32px;
+            }
+            .banner p {
+                font-size: 18px;
+            }
+            .advantage-item {
+                width: 100%;
+            }
+            .product-item {
+                width: 100%;
+            }
+            .data-item {
+                width: 48%;
+            }
+            .footer-col {
+                width: 48%;
+            }
+        }
+    </style>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-wrap">
+            <div class="logo">
+                <img src="?prompt=modern%20medical%20company%20logo%20with%20ETN%20initials%20blue%20color%20scheme&image_size=square" alt="安特耐logo">
+                <div class="logo-text">安特耐 <span>ETN</span></div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li><a href="news.html">资讯中心</a></li>
+                    <li><a href="recruitment.html">人才招聘</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 横幅轮播区 -->
+    <section class="banner">
+        <div class="banner-mask"></div>
+        <div class="banner-content">
+            <h1>安特耐 ETN</h1>
+            <p>致力于成为医用改性高分子材料领先供应商</p>
+            <button class="banner-btn" onclick="window.location.href='products.html'">了解更多产品</button>
+        </div>
+    </section>
+
+    <!-- 核心优势板块 -->
+    <section class="advantage">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心优势</h2>
+                <p>安特耐凭借多年行业积累，打造全方位的产品与服务优势，为客户创造更大价值</p>
+            </div>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3>丰富产品系列</h3>
+                    <p>拥有10+系列医用高分子材料产品，满足不同场景的应用需求</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>广泛客户基础</h3>
+                    <p>服务300+应用客户，覆盖医疗行业多个细分领域</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>强大配方库</h3>
+                    <p>积累1000+成熟配方，可快速响应客户定制化需求</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3>严格质量控制</h3>
+                    <p>完善的质量管理体系，确保产品符合医疗器械相关标准</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心板块 -->
+    <section class="product">
+        <div class="container">
+            <div class="section-title">
+                <h2>产品中心</h2>
+                <p>安特耐专注于医用高分子材料的研发与生产，产品覆盖多个医疗应用场景</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-img" style="background: url('?prompt=medical%20PVC%20granules%20white%20pellets%20close%20up&image_size=square') no-repeat center center;"></div>
+                    <div class="product-info">
+                        <h3>医用PVC粒料</h3>
+                        <p>适用于各类医用导管、输液器、注射器等医疗耗材的生产制造</p>
+                        <a href="product-detail.html?id=1" class="product-more">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img" style="background: url('?prompt=medical%20stabilizer%20powder%20chemical%20compounds&image_size=square') no-repeat center center;"></div>
+                    <div class="product-info">
+                        <h3>医用稳定剂加工助剂</h3>
+                        <p>环保型医用稳定剂，具有优异加工性能和热稳定性</p>
+                        <a href="product-detail.html?id=2" class="product-more">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img" style="background: url('?prompt=medical%20catheter%20tubing%20medical%20device&image_size=square') no-repeat center center;"></div>
+                    <div class="product-info">
+                        <h3>医用导管</h3>
+                        <p>定制化各类医用导管产品，满足不同临床应用需求</p>
+                        <a href="product-detail.html?id=3" class="product-more">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img" style="background: url('?prompt=medical%20polymer%20resin%20powder%20white%20fine%20particles&image_size=square') no-repeat center center;"></div>
+                    <div class="product-info">
+                        <h3>医用工程塑料</h3>
+                        <p>代理各大品牌医用级别塑料材料，为医疗产品提供安全可靠基础材料</p>
+                        <a href="product-detail.html?id=5" class="product-more">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img" style="background: url('?prompt=special%20PVC%20granules%20colored%20pellets%20medical%20grade&image_size=square') no-repeat center center;"></div>
+                    <div class="product-info">
+                        <h3>医用配件</h3>
+                        <p>定制化各类医用配件接头产品，满足不同临床应用需求</p>
+                        <a href="product-detail.html?id=5" class="product-more">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据展示板块 -->
+    <section class="data">
+        <div class="container">
+            <div class="data-list">
+                <div class="data-item">
+                    <div class="data-number">10+</div>
+                    <div class="data-text">产品系列</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-number">300+</div>
+                    <div class="data-text">应用客户</div>
+                </div>
+                <div class="data-item">
+                    <div class="data-number">1000+</div>
+                    <div class="data-text">配方库</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部信息 -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="footer-col">
+                    <h3>关于安特耐</h3>
+                    <ul>
+                        <li><a href="about.html">企业简介</a></li>
+                        <li><a href="about.html#history">发展历程</a></li>
+                        <li><a href="about.html#culture">企业文化</a></li>
+                        <li><a href="about.html#honors">荣誉资质</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>产品中心</h3>
+                    <ul>
+                        <li><a href="product-detail.html?id=1">医用PVC粒料</a></li>
+                        <li><a href="product-detail.html?id=2">医用稳定剂加工助剂</a></li>
+                        <li><a href="product-detail.html?id=3">医用工程塑料</a></li>
+                        <li><a href="product-detail.html?id=4">医用导管</a></li>
+                        <li><a href="product-detail.html?id=4">医用配件</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>资讯中心</h3>
+                    <ul>
+                        <li><a href="news.html">企业资讯</a></li>
+                        <li><a href="news.html#industry">行业动态</a></li>
+                        <li><a href="news.html#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <p>地址：中国 · 广东省 · 东莞市</p>
+                    <p>电话：+86-0755-23735665</p>
+                    <p>邮箱：sd100@ep-i.cn</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 安特耐(ETN) 版权所有 粤ICP备12345678号 | 网站域名：ep-i.cn</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的轮播图逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            // 模拟轮播图切换效果
+            const bannerImages = [
+                "?prompt=medical%20polymer%20materials%20factory%20exterior%20modern%20building&image_size=landscape_16_9",
+                "?prompt=medical%20research%20laboratory%20scientists%20working&image_size=landscape_16_9",
+                "?prompt=medical%20production%20line%20automated%20factory&image_size=landscape_16_9"
+            ];
+            let currentIndex = 0;
+            const banner = document.querySelector('.banner');
+            
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % bannerImages.length;
+                banner.style.backgroundImage = `url(${bannerImages[currentIndex]})`;
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
