@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>安特耐 - 医用改性高分子材料领先供应商</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 头部导航 */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d3761;
+        }
+
+        .logo-text span {
+            font-size: 27px;
+            color: #1d3761;
+            margin-left: 5px;
+        }
+
+        .nav ul {
+            display: flex;
+        }
+
+        .nav li {
+            margin: 0 15px;
+        }
+
+        .nav a {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 10px;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            color: #2A5CAF;
+            background: #f5f8ff;
+        }
+
+        /* 横幅轮播区 */
+        .banner {
+            height: 600px;
+            background: url("1.png") no-repeat center center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .banner-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(39,68,128,0.6);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .banner h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .banner p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .banner-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #2A5CAF;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .banner-btn:hover {
+            background: #1E4A8F;
+        }
+
+        /* 产品能力模块 */
+        .product {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .product .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .product-list {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+
+            width: 31%;
+
+            margin-bottom: 30px;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+            transition: transform 0.3s ease;
+
+        }
+
+        
+
+        .product-item:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+        
+
+        .product-img {
+
+            width: 100%;
+
+            height: 200px;
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        
+
+        .product-info {
+
+            padding: 20px;
+
+            background: #fff;
+
+        }
+
+        
+
+        .product-info h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+            color: #333;
+
+        }
+
+        
+
+        .product-info p {
+
+            color: #666;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .product-more {
+
+            display: inline-block;
+
+            color: #2A5CAF;
+
+            font-weight: 500;
+
+        }
+
+        
+
+        .product-more:hover {
+
+            text-decoration: underline;
+
+        }
+
+        /* 底部信息 */
+        footer {
+            background: #1d3761;
+            color: #ccc;
+            padding: 80px 0 30px;
+        }
+
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2A5CAF;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: #ccc;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .footer-col p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .about-content,
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strengths-grid,
+            .news-grid,
+            .footer-wrap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .banner h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav li {
+                margin: 5px 10px;
+            }
+
+            .banner {
+                height: 450px;
+            }
+
+            .banner h1 {
+                font-size: 32px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+
+            .strengths-grid,
+            .news-grid,
+            .footer-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body style="padding-bottom: 50px;">
+    <!-- 头部导航 -->
+    <header>
+        <div class="header-wrap">
+            <div class="logo">
+                <img alt="安特耐logo" src="logo.svg"/>
+                <div class="logo-text">安特耐 <span>ETN</span></div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="gywm.html">关于我们</a></li>
+                    <li><a href="cpzx.html">产品中心</a></li>
+                    <li><a href="zxzx.html">资讯中心</a></li>
+                    <li><a href="rczp.html">人才招聘</a></li>
+                    <li><a href="lxwm.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 横幅轮播区 -->
+    <section class="banner" id="banner">
+        <div class="banner-mask"></div>
+        <div class="banner-content">
+            <h1>产品中心</h1>
+        </div>
+    </section>
+
+    <!-- 产品能力 -->
+<section class="product">
+    <div class="container">
+<div class="product-list">
+<div class="product-item">
+<div class="product-img" style="background: url('12.jpg') no-repeat center center;"></div>
+<div class="product-info">
+<h3>医用耗材原料</h3>
+<p>适用于各类医用导管、输液器、注射器等医疗耗材的生产制造</p>
+<a class="product-more" href="products-1.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="product-item">
+<div class="product-img" style="background: url('14.jpg') no-repeat center center;"></div>
+<div class="product-info">
+<h3>医用加工助剂</h3>
+<p>环保型医用复合稳定剂和加工助剂 ，具有优异加工性能和热稳定性</p>
+<a class="product-more" href="products-2.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="product-item">
+<div class="product-img" style="background: url('10.png') no-repeat center center;"></div>
+<div class="product-info">
+<h3>医用工程塑料</h3>
+<p>代理各大品牌医用级别塑料材料，为医疗产品提供安全可靠基础材料</p>
+<a class="product-more" href="products-3.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="product-item">
+<div class="product-img" style="background: url('11.png') no-repeat center center;"></div>
+<div class="product-info">
+<h3>医用耗材导管</h3>
+<p>定制化各类医用导管产品，满足不同临床应用需求</p>
+<a class="product-more" href="products-4.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="product-item">
+<div class="product-img" ></div>   
+<div class="product-info">
+<h3>.........</h3>
+<p>敬请期待更多</p>
+<a class="product-more" href="cpzx.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="product-item">
+<div class="product-img" style="background: url('13.png') no-repeat center center;"></div>
+<div class="product-info">
+<h3>医用耗材配件</h3>
+<p>定制化各类医用配件接头产品，满足不同临床应用需求</p>
+<a class="product-more" href="products-5.html">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <!-- 底部信息 -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-col">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="gywm.html#Introduction">企业简介</a></li>
+                    <li><a href="gywm.html#Core Advantages">核心优势</a></li>
+                    <li><a href="gywm.html#Certifications">资质证书</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>产品中心</h3>
+                <ul>
+                    <li><a href="products-1.html">医用耗材原料</a></li>
+                    <li><a href="products-2.html">医用加工助剂</a></li>
+                    <li><a href="products-3.html">医用工程塑料</a></li>
+                    <li><a href="products-4.html">医用耗材导管</a></li>
+                    <li><a href="products-5.html">医用耗材配件</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>资讯中心</h3>
+                <ul>
+                    <li><a href="news.html">企业资讯</a></li>
+                    <li><a href="news.html#industry">行业动态</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系我们</h3>
+                <p>地址：中国 · 广东省 </p>
+                <p>电话：+86-0755-23735665</p>
+                <p>邮箱: sd100@ep-i.cn</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>版权所有 © 深圳市鑫荣江实业有限公司  | 企业官网:www.ep-i.cn</p>
+        </div>
+    </footer>
+
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; padding: 15px; background-color: #ffffff; color: #888888; font-family: Arial, sans-serif; z-index: 1000; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); font-size: 14px;">粤ICP备2026016305号</div>
+</body>
+</html>
